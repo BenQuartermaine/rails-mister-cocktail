@@ -63,6 +63,11 @@ acorn@^5.0.0:
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
   integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
 
+addressable@0.3.3:
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/addressable/-/addressable-0.3.3.tgz#e76fa0636d0581cb6a33f18705f47200256d7be0"
+  integrity sha1-52+gY20FgctqM/GHBfRyACVte+A=
+
 ajv-keywords@^3.1.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-3.2.0.tgz#e86b819c602cf8821ad637413698f1dec021847a"
@@ -2602,6 +2607,11 @@ fstream@^1.0.0, fstream@^1.0.2:
     mkdirp ">=0.5 0"
     rimraf "2"
 
+ftp@0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/ftp/-/ftp-0.1.1.tgz#3349d08a87363187fefacd4a658b2b0963603a48"
+  integrity sha1-M0nQioc2MYf++s1KZYsrCWNgOkg=
+
 function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -3827,6 +3837,11 @@ mime-types@^2.1.12, mime-types@~2.1.17, mime-types@~2.1.18, mime-types@~2.1.19:
   dependencies:
     mime-db "~1.37.0"
 
+mime@1.2.5:
+  version "1.2.5"
+  resolved "https://registry.yarnpkg.com/mime/-/mime-1.2.5.tgz#9eed073022a8bf5e16c8566c6867b8832bfbfa13"
+  integrity sha1-nu0HMCKov14WyFZsaGe4gyv7+hM=
+
 mime@1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/mime/-/mime-1.4.1.tgz#121f9ebc49e3766f311a76e1fa1c8003c4b03aa6"
@@ -4258,6 +4273,16 @@ onecolor@^3.0.4:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/onecolor/-/onecolor-3.1.0.tgz#b72522270a49569ac20d244b3cd40fe157fda4d2"
   integrity sha512-YZSypViXzu3ul5LMu/m6XjJ9ol8qAy9S2VjHl5E6UlhUH1KGKWabyEJifn0Jjpw23bYDzC2ucKMPGiH5kfwSGQ==
+
+open-uri@^0.4.3:
+  version "0.4.3"
+  resolved "https://registry.yarnpkg.com/open-uri/-/open-uri-0.4.3.tgz#6a6d0367262f22dfd649965179562f331d74db12"
+  integrity sha1-am0DZyYvIt/WSZZReVYvMx102xI=
+  dependencies:
+    addressable "0.3.3"
+    mime "1.2.5"
+  optionalDependencies:
+    ftp "0.1.1"
 
 opn@^5.1.0:
   version "5.4.0"
