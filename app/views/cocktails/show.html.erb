@@ -1,4 +1,6 @@
 <h1><%= @cocktail.name %></h1>
 
+<h1><%= @dose.description %></h1>
+
 <%= link_to "BACK", cocktails_path %>
-<%= link_to "ADD DOSE", doses_edit_path(@cocktail) %>
+<%= link_to "ADD DOSE", new_cocktail_dose_path(@cocktail) %>

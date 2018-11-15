@@ -8,15 +8,26 @@
 require 'open-uri'
 require 'json'
 
+puts "deleting doses"
+Dose.delete_all
+puts "deleting ingredients"
+Ingredient.delete_all
+puts "deleting cocktails"
+Cocktail.delete_all
 
-Parse the ingredients:
 
+puts "creating ingredients"
 url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 
-ingredients_hash = JSON.parse(open(url).read)
+ingredients_hash = JSON.parse(open(url).read)["drinks"]
 
-ingredients_hash["drinks"].each do |ingredient|
+ingredients_hash.each do |ingredient|
   Ingredient.create!(name: ingredient["strIngredient1"])
 end
 
+puts "creating cocktails"
+10.times do
+cocktail = Cocktail.create!(name: Faker::DragonBall.character)
+end
 
+puts "finished"

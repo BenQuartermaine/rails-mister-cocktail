@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'doses/edit'
-  get 'cocktails/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :cocktails
+  resources :cocktails do
+    resources :doses, only: [ :index, :new, :create ]
+  end
 end
