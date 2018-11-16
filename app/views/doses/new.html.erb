@@ -1,5 +1,5 @@
 
-
+<!-- Form for adding a dose to your cocktail -->
 <div class="row container-row-new-dose">
   <div class="col-md-4 offset-md-4">
     <h1>Dose it up</h1>
@@ -12,13 +12,5 @@
   </div>
 </div>
 
-<div class="footer">
-  <div class="footer-links">
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-twitter"></i></a>
-    <a href="#"><i class="fab fa-linkedin"></i></a>
-  </div>
-  <div class="footer-copyright">
-   <i class="fas fa-heart"></i> Monsieur Cocktail <i class="fas fa-heart"></i>
- </div>
-</div>
+<!-- Footer -->
+<%= render 'cocktails/footer', coccktail: @cocktail %>

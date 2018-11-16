@@ -1,7 +1,8 @@
 <!-- Banner -->
-  <div class="banner" style="background-color: #ACB7DD">
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= image_path 'Lemon.jpg' %>')">
     <div class="banner-content">
-      <h1>Monseiur Cocktail</h1>
+      <h1>Monsieur Cocktail</h1>
       <p>Spice up your night on the tins!</p>
     </div>
     <div class="add-button">
@@ -9,15 +10,18 @@
     </div>
   </div>
 
+<!-- container display of all the cocktails cards -->
 <div class="container">
   <div class="row">
       <% @cocktails.each do |cocktail| %>
     <div class="col-sm-4">
       <%= link_to cocktail_path(cocktail) do %>
-      <div class="card" style="background-color: $green">
-        <div class="card-category"><%= ["Popular", "Game Changer", "Stumbler", "One for Mum!", "DONT YOU DARE", "G'day Mate"].sample %></div>
+      <div class="card" 
+  style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+         url('<%= cocktail.photo? ? (cl_image_path cocktail.photo, height: 300, width: 400, crop: :fill) : (image_path 'cocktail.jpg') %>')">
+        <div class="card-category"><%= ["Popular", "Game Changer", "Stumbler", "One for Mum!", "DONT YOU DARE", "G'day Mate"].sample.capitalize %></div>
         <div class="card-description">
-          <h2><%= cocktail.name %></h2>
+          <h2><%= cocktail.name.capitalize %></h2>
         </div>
       </div>
     </div>
