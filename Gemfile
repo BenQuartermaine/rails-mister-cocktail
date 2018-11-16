@@ -6,6 +6,8 @@ ruby '2.4.4'
 # uploading photos by user
 gem 'carrierwave', '~> 1.2'
 
+gem 'rest-client', '>= 2.0'
+
 # For image upload and store
 gem 'cloudinary'
 gem 'dotenv-rails', groups: [:development, :test]
