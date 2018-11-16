@@ -25,9 +25,5 @@ ingredients_hash.each do |ingredient|
   Ingredient.create!(name: ingredient["strIngredient1"])
 end
 
-puts "creating cocktails"
-10.times do
-cocktail = Cocktail.create!(name: Faker::DragonBall.character)
-end
 
 puts "finished"
