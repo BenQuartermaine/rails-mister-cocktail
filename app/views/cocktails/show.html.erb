@@ -1,12 +1,35 @@
-<h1><%= @cocktail.name %></h1>
+<div class="container-doses-show">
+  <div class="row">
+    <div>
+      <h1><%= @cocktail.name.capitalize %></h1>
+      <div class="dose-list">
+        <p>Ingredients List</p>
+        <% @cocktail.doses.each do |dose| %>
+        <div class="description-delete">
+          <h4><%= dose.description.capitalize %> - <%= dose.ingredient.name.capitalize %></h4>
+          <%= link_to "DELETE DOSE", cocktail_dose_path(id: dose.id, cocktail_id: @cocktail.id ), method: "delete"%>
+        </div>
+        <% end %>
+      </div>
 
+      <div class="nav-buttons">
+        <%= link_to "BACK", cocktails_path, class: "btn btn-warning"%>
+        <%= link_to "ADD DOSE", new_cocktail_dose_path(@cocktail), class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
 
-<% @cocktail.doses.each do |dose| %>
-  <h2><%= dose.description %> - <%= dose.ingredient.name %></h2>
-  <%= link_to "DELETE DOSE", cocktail_dose_path(id: dose.id, cocktail_id: @cocktail.id ), method: "delete" %>
-<% end %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+   <i class="fas fa-heart"></i> Monsieur Cocktail <i class="fas fa-heart"></i>
+ </div>
+</div>
 
-<%= link_to "BACK", cocktails_path %>
-<%= link_to "ADD DOSE", new_cocktail_dose_path(@cocktail) %>
 
 

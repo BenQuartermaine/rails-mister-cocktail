@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+  <html>
   <head>
     <title>RailsMisterCocktail</title>
     <%= csrf_meta_tags %>
@@ -12,7 +12,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="wrapper">
+      <%= yield %>  
+    </div>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
   </body>

@@ -1,11 +1,23 @@
-<h1>Hello</h1>
 
 
-<%= link_to "Back", cocktails_path %> 
-<%= simple_form_for [@cocktail] do |f| %>
+<div class="row new-cocktail-form">
+  <div class="col-md-4 offset-md-4">
+  <h1>Add a cocktail</h1> 
+    <%= simple_form_for [@cocktail] do |f| %>
     <%= f.input :name %>
-    <%= f.submit %>
-    <%= f.association :ingredients, as: :check_boxes %>
-<% end %>
+    <%= f.submit class: "btn btn-primary" %>
+    <%= link_to "Back", cocktails_path, class: "btn btn-danger" %> 
+    <% end %>
+  </div>
+</div>
 
-<!-- Add ingredient & dose capabilities -->
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+   <i class="fas fa-heart"></i> Monsieur Cocktail <i class="fas fa-heart"></i>
+ </div>
+</div>

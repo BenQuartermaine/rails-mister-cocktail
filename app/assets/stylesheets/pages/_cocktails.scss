@@ -1,0 +1,31 @@
+// Place all the styles related to the cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper {
+  position: relative;
+  min-height: 100%;
+}
+.container-doses-show {
+  display: flex;
+  justify-content: center;
+}
+.description-delete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-buttons {
+  display: flex;
+  margin: 10px;
+  justify-content: center;
+}
+.btn {
+  margin: 5px;
+}
+.description-delete h4 {
+  margin-right: 20px;
+}
+.new-cocktail-form {
+  display: flex;
+  justify-content: center;
+}

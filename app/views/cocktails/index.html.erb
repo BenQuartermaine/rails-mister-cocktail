@@ -1,10 +1,28 @@
-<h1>Cocktails</h1>
+<!-- Banner -->
+  <div class="banner" style="background-color: #ACB7DD">
+    <div class="banner-content">
+      <h1>Monseiur Cocktail</h1>
+      <p>Spice up your night on the tins!</p>
+    </div>
+    <div class="add-button">
+      <h2><%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary btn-lg" %></h2> 
+    </div>
+  </div>
 
-<h2><%= link_to "Add a cocktail", new_cocktail_path %></h2> 
-
-<% @cocktails.each do |cocktail| %>
-  <h2><%= link_to cocktail.name, cocktail_path(cocktail) %></h2>
-<% end %>
-
-
+<div class="container">
+  <div class="row">
+      <% @cocktails.each do |cocktail| %>
+    <div class="col-sm-4">
+      <%= link_to cocktail_path(cocktail) do %>
+      <div class="card" style="background-color: $green">
+        <div class="card-category"><%= ["Popular", "Game Changer", "Stumbler", "One for Mum!", "DONT YOU DARE", "G'day Mate"].sample %></div>
+        <div class="card-description">
+          <h2><%= cocktail.name %></h2>
+        </div>
+      </div>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
 
